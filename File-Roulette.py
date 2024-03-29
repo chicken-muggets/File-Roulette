@@ -2,7 +2,9 @@ import random
 import os
 import tkinter as tk
 from tkinter import filedialog
+from ctypes import windll
 
+windll.shcore.SetProcessDpiAwareness(1)
 def delete_file(file_name):
     if os.path.exists(file_name):
         os.remove(file_name)
